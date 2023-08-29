@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.image {
+	width: 100%;
+}
+
+.img-bx {
+	position: relative;
+}
+
+.afterImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+	/*transition: opacity 2s;*/
+}
+
+/*.afterImage:hover {
+	opacity: 1;
+}*/

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta content="width=device-width, initial-scale=1.0, minimal-ui" name="viewport">
+	<title>Image Comparison Slider</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+</head>
+
+<body>
+	<div class="card mt-4">
+		<div class="card-header"><h5>Image before-after effect</h5></div>
+		<div class="card-body">
+			<p>Drag the slider to see the difference.</p>
+			<div class="d-flex justify-content-between">
+				<strong>Before</strong>
+				<strong>After</strong>
+			</div>
+			<input type="range" class="form-range" id="slider" value="0">
+			<div class="img-bx">
+				<img class="image mt-4" src="assets/images/image1.png">
+				<img class="image afterImage mt-4" src="assets/images/image2.png">
+			</div>
+		</div>
+	</div>
+	<script>
+
+		const afterImg = document.querySelector(".afterImage");
+
+		document.getElementById('slider').addEventListener('input', function() {
+			afterImg.style.opacity = this.value / 100
+		});
+	</script>
+</body>
+
+</html>
